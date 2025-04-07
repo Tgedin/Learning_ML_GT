@@ -1,0 +1,28 @@
+# Create environment.yml for your conda environment
+cat << EOF > environment.yml
+name: mldev
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - jupyter
+  - ipykernel
+  - black
+  - mypy
+  - pytest
+  - pip
+  - pip:
+    - tensorflow
+    - torch
+    - torchvision
+    - torchaudio
+    - wandb
+    - mlflow
+EOF
